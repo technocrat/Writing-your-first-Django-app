@@ -1,0 +1,70 @@
+2011-02-22
+
+This is taken from "Writing your first Django app" at http://goo.gl/t6Jc
+for Django version 1.2.5, which was the current stable version on this
+date. THE NEXT VERSION HAS CHANGES THAT WILL BE NEEDED TO MAKE THIS
+RUN UNDER VERSION 1.3.
+
+The reason for providing the complete final code for the tutorial is
+that I found the tutorial hard to follow in places. When I first started,
+for example, I was confused in Part I by the section "Playing with 
+the API" because it wasn't obvious why the authors were using the
+command line to create and modify objects, rather than the admin. By
+skipping it, I missed a lot. The second thing that threw me was all
+the work writing views that gets thrown away for generic views and
+the careful reading that was needed to make all the adjustments that
+were described but not spelled out fully. 
+
+The biggest reason, though, was that I had been trying to write my
+own application by cribbing from the tutorial and finding that some
+things worked, but others didn't, even after I went back and corrected
+by initial attempts at translation. I finally decided that I just really
+needed to work through the tutorial from beginning to end until it worked
+as described and only then should I start using it as a reference for
+my own apps. 
+
+If this helps you to get the tutorial example working, 
+I suggest going back and working through the tutorial
+from scratch, cutting and pasting as you go. You can come back to
+these files if you get lost, but you will find that the big
+benefit from the material comes with following along step
+by step, not just from reading the finished code.
+
+You will need to edit settings.py to change TEMPLATE_DIRS from 
+
+    '/PATH_TO_PARENT_DIRECTORY/tutor/templates',
+
+to reflect the directory to which you have cloned this repository,
+such as
+
+    '/home/jason/tutor/templates',
+
+(Windows users, please make the appropriate adjustments.)
+
+My suggestion is to make no other changes until you have the example
+code working.
+
+The sample sqlite3 database has a couple of poll objects to get you
+started.
+
+You should be able to access the following pages after starting the
+development server with:
+
+$ python manage.py runserver
+
+by pointing your browser to:
+
+http://localhost:8000/admin/
+http://localhost:8000/polls/
+http://localhost:8000/polls/1/
+http://localhost:8000/polls/2/
+
+and by following the links. You will get an error page for 
+
+http://localhost:8000/
+
+because no default page has been defined.
+
+For the admin:
+username: rc
+password: demo
